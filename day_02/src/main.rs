@@ -8,32 +8,20 @@ fn main() {
         .iter()
         .map(|x| x.to_string().into())
         .collect();
-    
-    let correct: u32 = passwords.clone().iter().map(|x| {
-        if x.check_sled_rental() {
-            return 1;
-        } else {
-            return 0;
-        }
-    }).sum();
 
-    println!(
-        "[PART ONE] number of correct passswords: {}",
-        correct
-    );
+    let correct: u32 = passwords
+        .iter()
+        .map(|x| if x.check_sled_rental() { 1 } else { 0 })
+        .sum();
 
-    let correct: u32 = passwords.clone().iter().map(|x| {
-        if x.check_toboggan_corporate() {
-            return 1;
-        } else {
-            return 0;
-        }
-    }).sum();
+    println!("[PART ONE] number of correct passswords: {}", correct);
 
-    println!(
-        "[PART TWO] number of correct passswords: {}",
-        correct
-    );
+    let correct: u32 = passwords
+        .iter()
+        .map(|x| if x.check_toboggan_corporate() { 1 } else { 0 })
+        .sum();
+
+    println!("[PART TWO] number of correct passswords: {}", correct);
 }
 
 #[cfg(test)]
