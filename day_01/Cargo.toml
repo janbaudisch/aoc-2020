@@ -1,0 +1,12 @@
+[package]
+name = "day_01"
+version = "1.0.0"
+description = "Day 1 - Advent of Code 2020"
+authors = ["Jan Baudisch <dev@baudisch.xyz>"]
+license = "GPL-3.0-or-later"
+readme = "../README.md"
+edition = "2018"
+workspace = ".."
+
+[dependencies]
+common = { path = "../common" }

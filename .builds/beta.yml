@@ -1,0 +1,16 @@
+image: alpine/latest
+package:
+  - alpine-sdk
+  - curl
+sources:
+  - https://git.sr.ht/~janbaudisch/aoc-2020
+tasks:
+  - setup: curl -sSf https://sh.rustup.rs | sh -s -- -y --default-toolchain beta
+  - build: |
+      . $HOME/.cargo/env
+      cd aoc-2020
+      cargo build --verbose --all
+  - test: |
+      . $HOME/.cargo/env
+      cd aoc-2020
+      cargo test --verbose --all

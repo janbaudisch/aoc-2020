@@ -1,0 +1,20 @@
+image: alpine/latest
+package:
+  - alpine-sdk
+  - curl
+sources:
+  - https://git.sr.ht/~janbaudisch/aoc-2020
+tasks:
+  - setup: |
+      curl -sSf https://sh.rustup.rs | sh -s -- -y --default-toolchain stable
+      . $HOME/.cargo/env
+      rustup component add rustfmt
+      rustup component add clippy
+  - format: |
+      . $HOME/.cargo/env
+      cd aoc-2020
+      cargo fmt --all -- --check
+  - lint: |
+      . $HOME/.cargo/env
+      cd aoc-2020
+      cargo clippy --all -- --deny clippy::all

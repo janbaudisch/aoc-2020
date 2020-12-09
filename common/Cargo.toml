@@ -1,0 +1,9 @@
+[package]
+name = "common"
+version = "1.0.0"
+description = "Common code for Advent of Code 2019"
+authors = ["Jan Baudisch <dev@baudisch.xyz>"]
+license = "GPL-3.0-or-later"
+readme = "../README.md"
+edition = "2018"
+workspace = ".."

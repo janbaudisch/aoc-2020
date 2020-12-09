@@ -1,0 +1,9 @@
+[workspace]
+members = [
+    "common",
+    "day_01"
+]
+
+[profile.release]
+codegen-units = 1
+lto = true
