@@ -7,12 +7,12 @@ fn main() {
         .collect();
 
     println!(
-        "[PART ONE] product of correct numbers: {}",
+        "[PART ONE] product of correct expenses: {}",
         calculate_product2(&expenses)
     );
 
     println!(
-        "[PART TWO] product of correct numbers: {}",
+        "[PART TWO] product of correct expenses: {}",
         calculate_product3(&expenses)
     );
 }
