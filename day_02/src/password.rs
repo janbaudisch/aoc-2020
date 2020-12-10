@@ -15,7 +15,7 @@ impl From<String> for Password {
             .map(|x| usize::from_str_radix(x, 10).expect("error converting input"))
             .collect();
 
-        Password {
+        Self {
             a: a_b[0],
             b: a_b[1],
             character: policy[1].chars().next().expect("error converting input"),
