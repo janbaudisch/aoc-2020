@@ -169,7 +169,7 @@ fn validate_eye_color(eye_color: &str) -> bool {
 fn validate_id(id: &str) -> bool {
     check_characters!(id, 9);
 
-    if let Err(_) = u32::from_str_radix(id, 10) {
+    if u32::from_str_radix(id, 10).is_err() {
         return false;
     }
 
