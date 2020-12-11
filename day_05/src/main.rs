@@ -14,10 +14,7 @@ fn main() {
     let mut sorted = ids.clone();
     sorted.sort_unstable();
 
-    println!(
-        "[PART ONE] highest seat ID: {}",
-        sorted.pop().unwrap()
-    );
+    println!("[PART ONE] highest seat ID: {}", sorted.pop().unwrap());
 
     let mut possible = Vec::with_capacity(1024);
 
