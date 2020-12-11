@@ -9,7 +9,7 @@ macro_rules! check_characters {
 macro_rules! check_number {
     ($number:expr, $min:expr, $max:expr) => {
         if let Ok(number) = u16::from_str_radix($number, 10) {
-            if number < $min || number > $max {
+            if !($min..=$max).contains(&number) {
                 return false;
             }
         } else {
