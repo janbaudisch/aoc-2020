@@ -40,3 +40,19 @@ pub fn read_lines() -> Vec<String> {
 
     lines
 }
+
+pub fn read_blocks() -> Vec<Vec<String>> {
+    let mut blocks: Vec<Vec<String>> = Vec::new();
+
+    loop {
+        let block = read_lines();
+
+        if block.is_empty() {
+            break;
+        }
+
+        blocks.push(block);
+    }
+
+    blocks
+}
