@@ -52,7 +52,7 @@ mod tests {
     #[test]
     fn part_one() {
         let ride = Ride::create(generate_map(), 3, 1);
-        assert!(ride.ride() == 7);
+        assert_eq!(ride.ride(), 7);
     }
 
     #[test]
@@ -63,6 +63,6 @@ mod tests {
             let (change_x, change_y) = x;
             Ride::create(map.clone(), *change_x, *change_y).ride()
         });
-        assert!(rides.product::<u32>() == 336);
+        assert_eq!(rides.product::<u32>(), 336);
     }
 }

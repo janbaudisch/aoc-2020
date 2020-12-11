@@ -105,43 +105,43 @@ mod tests {
 
     #[test]
     fn part_one() {
-        assert!(
+        assert_eq!(
             parse_input(generate_input1())
                 .iter()
                 .map(|x| x.validate_loose())
                 .map(|x| if x { 1 } else { 0 })
-                .sum::<u8>()
-                == 2
+                .sum::<u8>(),
+            2
         );
     }
 
     #[test]
     fn part_two() {
-        assert!(
+        assert_eq!(
             parse_input(generate_input1())
                 .iter()
                 .map(|x| x.validate_strict())
                 .map(|x| if x { 1 } else { 0 })
-                .sum::<u8>()
-                == 2
+                .sum::<u8>(),
+            2
         );
 
-        assert!(
+        assert_eq!(
             parse_input(generate_input2())
                 .iter()
                 .map(|x| x.validate_strict())
                 .map(|x| if x { 1 } else { 0 })
-                .sum::<u8>()
-                == 0
+                .sum::<u8>(),
+            0
         );
 
-        assert!(
+        assert_eq!(
             parse_input(generate_input3())
                 .iter()
                 .map(|x| x.validate_strict())
                 .map(|x| if x { 1 } else { 0 })
-                .sum::<u8>()
-                == 4
+                .sum::<u8>(),
+            4
         );
     }
 }
