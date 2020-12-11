@@ -30,7 +30,7 @@ fn main() {
 
     possible_ids.retain(|x| (ids.contains(&(x + 1)) && ids.contains(&(x - 1))));
 
-    println!("[PART ONE] seat ID: {}", possible_ids.pop().unwrap());
+    println!("[PART TWO] seat ID: {}", possible_ids.pop().unwrap());
 }
 
 #[cfg(test)]
